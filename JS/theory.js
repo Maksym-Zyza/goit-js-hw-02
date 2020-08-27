@@ -58,6 +58,18 @@
 // }
 // console.log(`Total:`, total);
 
+// ФУНКЦИЯ 1
+// const calcTotal = function (items) {
+//   let total = 0;
+//   for (const item of items) {
+//     total += item;
+//   }
+//   return total;
+// };
+// console.log(calcTotal([1, 2, 3]));
+// console.log(calcTotal([5, 10, 15, 20]));
+// console.log(calcTotal([100, 200, 300]));
+
 // ЗАДАЧА 2
 // Увеличить сумму покупок на 20%
 // const cart = [54, 28, 105, 70, 92, 17, 120];
@@ -81,7 +93,7 @@
 // }
 // console.log(`Total:`, total);
 
-// 2.1 Чеерез For...of
+// 3.1 Чеерез For...of
 // const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 11];
 // let total = 0;
 // for (const number of numbers) {
@@ -92,7 +104,7 @@
 // }
 // console.log(`Total:`, total);
 
-// 2.2 Логика от обратного
+// 3.2 Логика от обратного
 // const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 11];
 // let total = 0;
 // for (const number of numbers) {
@@ -103,6 +115,17 @@
 //   total += number;
 // }
 // console.log(`Total:`, total);
+
+// ФУНКУЦИЯ 2
+// Для перебора и логирования массива
+const logItems = function (items) {
+  for (const item of items) {
+    console.log(item);
+  }
+};
+logItems(["sdfasdf", "sdfsreh", "hgfd45", "h224fdsd", "bnvnv"]);
+logItems([1, 2, 3, 4, 5]);
+logItems(["клавиатура", "наушники", "часы"]);
 
 // ЗАДАЧА 4
 // Написать скрипт поиска логина
@@ -234,14 +257,14 @@
 // ЗАДАЧА 10
 // Метод .splice() (удалить, добавить, обновить)
 
-const cards = [
-  "Карточка-1",
-  "Карточка-2",
-  "Карточка-3",
-  "Карточка-4",
-  "Карточка-5",
-];
-console.table(cards);
+// const cards = [
+//   "Карточка-1",
+//   "Карточка-2",
+//   "Карточка-3",
+//   "Карточка-4",
+//   "Карточка-5",
+// ];
+// console.table(cards);
 
 // const csrdToRemove = "Карточка-3";
 // const index = cards.indexOf(csrdToRemove);
@@ -252,9 +275,38 @@ console.table(cards);
 // console.table(cards);
 
 // Добачить "Карточку-6", "Карточку-7" между карточкой 2 и 3 (по индексу)
-cards.splice(2, 0, "Карточка-6", "Карточка-7");
-console.table(cards);
+// cards.splice(2, 0, "Карточка-6", "Карточка-7");
+// console.table(cards);
 
 // Обновить: "Карточку-4" заменить на "Карточку-101"  (по индексу)
-cards.splice(5, 1, "Карточку-101");
-console.table(cards);
+// cards.splice(5, 1, "Карточку-101");
+// console.table(cards);
+
+// ФУНКЦИИ
+// Выполняют одну задачу
+// const add = function (x, y) {
+//   console.log(x);
+//   console.log(y);
+//   const result = x + y;
+//   console.log(`Сумма: ${result}`);
+//   console.log(`Выполняется функция add`);
+//   return result; //возврат значения и прекращает выполнение ф-и!
+// };
+
+// add(5, 10); //Вызов функции
+
+// const r1 = add(20, 30); //возврат значения ф-и
+// console.log(`r1:`, r1);
+
+// СТЕК ВЫЗОВОВ
+// Выполняется main после FnA, console.log FnA, FnВ, console.log FnВ; FnВ возвращает значение в FnА; FnА возвращает значение в main
+// const FnA = function () {
+//   console.log(`Выполняется функция A`);
+//   FnB();
+// };
+
+// const FnB = function () {
+//   console.log(`Выполняется функция B`);
+//   console.log(111);
+// };
+// FnA();
