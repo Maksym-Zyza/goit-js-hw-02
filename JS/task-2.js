@@ -4,6 +4,7 @@
 const calculateEngravingPrice = function (message, pricePerWord) {
   console.log(`Цена за слово:`, pricePerWord);
   const words = message.split(" ");
+
   pricePerWord = words.length * pricePerWord;
   const slug = words.join(" ");
 

@@ -186,6 +186,22 @@
 // }
 // console.log(`Самое малинькое число: ${minNumber}`);
 
+// ФУНКУЦИЯ 4
+// const findSmallesNumber = function (numbers) {
+//   let minNumber = numbers[0];
+//   for (const number of numbers) {
+//     console.log(number);
+//     if (number < minNumber) {
+//       minNumber = number;
+//     }
+//   }
+//   return `Найменшее число массива: ${minNumber}`;
+// };
+
+// console.log(findSmallesNumber([3, 8, 12, -2, 15]));
+// console.log(findSmallesNumber([100, 54, 8, 12, 47]));
+// console.log(findSmallesNumber([7, 21, 84, 15, 4]));
+
 // ЗАДАЧА 6
 // Написать скрипт который объединяет все элементы массива в однострочное значение, элементи сделать розделены ","
 // const friends = [`Mango`, `Apple`, `Poly`, `Kiwi`, `Ajax`];
@@ -227,6 +243,26 @@
 // }
 // console.log(invertedString);
 
+// ФУНКУЦИЯ 5
+// const changeCase = function (string) {
+//   const letters = string.split("");
+//   let invertedString = "";
+
+//   console.log(letters);
+
+//   for (const letter of letters) {
+//     invertedString +=
+//       letter === letter.toLowerCase()
+//         ? letter.toUpperCase()
+//         : letter.toLowerCase();
+//   }
+//   return invertedString;
+// };
+
+// console.log(changeCase("dfsJLKJL"));
+// console.log(changeCase("Манго"));
+// console.log(changeCase("AjaX"));
+
 // ЗАДАЧА 8
 // Написать slag в URL из  названия статти (нижний регистр с сшиванием)
 // 1) Нормализируем строку
@@ -246,6 +282,16 @@
 // const title = "Top 10 benefits of React framework";
 // const slug = title.toLowerCase().split(" ").join("-");
 // console.log(slug);
+
+// ФУНКУЦИЯ 6
+// const slugify = function (title) {
+//   const slug = title.toLowerCase().split(" ").join("-");
+//   return slug;
+// };
+
+// console.log(slugify("Top 10 benefits of React framework"));
+// console.log(slugify("Fufsld GOOD Rewee of React framework"));
+// console.log(slugify("SDFSDF dsfsdfsd of React framework"));
 
 // ЗАДАЧА 9
 // Написать скрипт который считает сумму двух масивов
@@ -329,3 +375,33 @@
 //   console.log(111);
 // };
 // FnA();
+
+// ПСЕВДОМАССИВ arguments В ФУНКЦИЯХ
+// const fn = function () {
+//   console.log(arguments);
+
+//   const args = Array.from(arguments); // преобразование псевдомасива в массив
+//   console.log(args);
+// };
+
+// fn(1, 2, 3);
+// fn(1, 2, 3, 4, 5);
+// fn(1, 2, 3, 4, 5, 6, 7);
+
+// const fn = function (...args) {  // преобразование псевдомасива в массив
+//   console.log(args);
+// };
+
+// fn(1, 2, 3);
+// fn(1, 2, 3, 4, 5);
+// fn(1, 2, 3, 4, 5, 6, 7);
+
+// Чтобы записать первые аргументы в параментры
+const fn = function (a, b, ...args) {
+  console.log(`${a} ${b}`);
+  console.log(args);
+};
+
+fn("Hello", 1, 2, 3);
+fn("Yes", 1, 2, 3, 4, 5);
+fn(1, 2, 3, 4, 5, 6, 7);
