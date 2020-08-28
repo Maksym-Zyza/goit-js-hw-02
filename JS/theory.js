@@ -118,14 +118,14 @@
 
 // ФУНКУЦИЯ 2
 // Для перебора и логирования массива
-const logItems = function (items) {
-  for (const item of items) {
-    console.log(item);
-  }
-};
-logItems(["sdfasdf", "sdfsreh", "hgfd45", "h224fdsd", "bnvnv"]);
-logItems([1, 2, 3, 4, 5]);
-logItems(["клавиатура", "наушники", "часы"]);
+// const logItems = function (items) {
+//   for (const item of items) {
+//     console.log(item);
+//   }
+// };
+// logItems(["sdfasdf", "sdfsreh", "hgfd45", "h224fdsd", "bnvnv"]);
+// logItems([1, 2, 3, 4, 5]);
+// logItems(["клавиатура", "наушники", "часы"]);
 
 // ЗАДАЧА 4
 // Написать скрипт поиска логина
@@ -153,6 +153,25 @@ logItems(["клавиатура", "наушники", "часы"]);
 //   ? `Логин ${loginYes} найден`
 //   : `Логин ${loginYes} не найден`;
 // console.log(message);
+
+// ФУНКУЦИЯ 3
+// const logins = ["sdfasdf", "sdfsreh", "hgfd45", "h224fdsd", "bnvnv"];
+// const findLogin = function (allLogins, loginToFind) {
+//   // if (allLogins.includes(loginToFind)) {
+//   //   return `Логин ${loginToFind} найден`;
+//   // }
+//   // return `Логин ${loginToFind} не найден`;
+//   return allLogins.includes(loginToFind)
+//     ? `Логин ${loginToFind} найден`
+//     : `Логин ${loginToFind} не найден`;
+// };
+
+// findLogin(logins);
+
+// console.log(findLogin(logins, "hgfd45"));
+// console.log(findLogin(logins, "sdfsdvsv"));
+// console.log(findLogin(logins, "h224fdsd"));
+// console.log(findLogin(logins, "ssffv"));
 
 // ЗАДАЧА 5
 // Написать скрипт поиска самого малинького числа в массиве, при условии что числа уникальные.
