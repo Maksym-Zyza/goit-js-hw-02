@@ -397,11 +397,47 @@
 // fn(1, 2, 3, 4, 5, 6, 7);
 
 // Чтобы записать первые аргументы в параментры
-const fn = function (a, b, ...args) {
-  console.log(`${a} ${b}`);
-  console.log(args);
-};
+// const fn = function (a, b, ...args) {
+//   console.log(`${a} ${b}`);
+//   console.log(args);
+// };
 
-fn("Hello", 1, 2, 3);
-fn("Yes", 1, 2, 3, 4, 5);
-fn(1, 2, 3, 4, 5, 6, 7);
+// fn("Hello", 1, 2, 3);
+// fn("Yes", 1, 2, 3, 4, 5);
+// fn(1, 2, 3, 4, 5, 6, 7);
+
+// ЗАДАЧА 11 (С ФУНКЦИЕЙ)
+// Написать функцию для сложения произвольного количества аргументов
+// const add = function (...args) {
+//   console.log(args);
+//   let total = 0;
+
+//   for (const arg of args) {
+//     total += arg;
+//   }
+//   return total;
+// };
+
+// console.log(add(1, 2, 3));
+// console.log(add(1, 2, 3, 4, 5));
+
+// ЗАДАЧА 12 (С ФУНКЦИЕЙ)
+// Написать функцию которая возвращает новый массив с одинаковыми аргументами
+// -первым аргументом принимает массыв, после произвольное количество другиъ аргументов
+// const titleNumbers = function (array, ...args) {
+//   console.log("array:", array);
+//   console.log("args:", args);
+//   const newArray = [];
+
+//   for (const element of array) {
+//     if (args.includes(element)) {
+//       newArray.push(element); //пушим елементы в новый массив
+//       // console.log(element);
+//     }
+//   }
+//   return newArray;
+// };
+
+// console.log(titleNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8));
+// console.log(titleNumbers([10, 20, 30, 40, 50], 10, 15, 20, 30, 80));
+// console.log(titleNumbers([100, 200, 300, 400, 500], 10, 15, 200, 300, 800));
