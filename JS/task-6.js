@@ -23,9 +23,12 @@ for (let input = 0; input !== null; input += 0) {
     console.log(`Начальное значение: ${total}`);
     // total += Number(input);
 
+    let element = 0;
     for (const number of numbers) {
-      total += Number(number);
+      element = Number(number);
     }
+    total += Number(element);
+
     console.log(`Введенное число: ${input}`);
     console.log(`Сумма: ${total}`);
   }
